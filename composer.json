@@ -9,7 +9,7 @@
             "homepage": "https://wingsline.com"
         }
     ],
-    "homepage": "https://github.com/wingsline/passwordlessauth",
+    "homepage": "https://github.com/wingsline/laravel-passwordlessauth",
     "keywords": ["Laravel", "PasswordlessAuth"],
     "require": {
         "illuminate/support": "~7",
