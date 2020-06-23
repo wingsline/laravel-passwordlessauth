@@ -13,9 +13,9 @@ class PasswordlessAuthServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'wingsline');
-        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'wingsline');
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'wingsline');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'wingsline');
 
         // Publishing is only necessary when using the CLI.
         if ($this->app->runningInConsole()) {
@@ -40,7 +40,7 @@ class PasswordlessAuthServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/passwordlessauth.php', 'passwordlessauth');
+        $this->mergeConfigFrom(__DIR__.'/../config/passwordlessauth.php', 'passwordlessauth');
 
         // Register the service the package provides.
         $this->app->singleton('passwordlessauth', function ($app) {
@@ -59,17 +59,17 @@ class PasswordlessAuthServiceProvider extends ServiceProvider
     {
         // Publishing the configuration file.
         $this->publishes([
-            __DIR__ . '/../config/passwordlessauth.php' => config_path('passwordlessauth.php'),
+            __DIR__.'/../config/passwordlessauth.php' => config_path('passwordlessauth.php'),
         ], 'passwordlessauth');
 
         // Publishing the views.
         $this->publishes([
-            __DIR__ . '/../resources/views' => base_path('resources/views/vendor/wingsline'),
+            __DIR__.'/../resources/views' => base_path('resources/views/vendor/wingsline'),
         ], 'passwordlessauth');
 
         // Publishing the translation files.
         $this->publishes([
-            __DIR__ . '/../resources/lang' => resource_path('lang/vendor/wingsline'),
+            __DIR__.'/../resources/lang' => resource_path('lang/vendor/wingsline'),
         ], 'passwordlessauth');
     }
 }

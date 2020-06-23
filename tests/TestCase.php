@@ -15,9 +15,9 @@ class TestCase extends Orchestra
     {
         parent::setUp();
 
-        $this->withFactories(__DIR__ . '/Factories');
+        $this->withFactories(__DIR__.'/Factories');
         // for layout.app view
-        view()->getFinder()->addLocation(__DIR__ . '/views');
+        view()->getFinder()->addLocation(__DIR__.'/views');
         // add the routes
         $this->app->make('passwordlessauth')->auth();
     }

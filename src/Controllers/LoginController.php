@@ -118,14 +118,14 @@ class LoginController extends Controller
         /** @var Authenticatable $user */
         $user = config('auth.providers.users.model')::find($request->route('id'));
 
-        if (!$user) {
+        if (! $user) {
             throw new AuthorizationException();
         }
 
         // check if user is verified
         if ($user instanceof MustVerifyEmail && $user->hasVerifiedEmail()) {
             // check the email
-            if (!hash_equals((string) $request->route('hash'), $this->generateHashForUser($user, $request))) {
+            if (! hash_equals((string) $request->route('hash'), $this->generateHashForUser($user, $request))) {
                 throw new AuthorizationException();
             }
 
@@ -144,7 +144,7 @@ class LoginController extends Controller
      */
     protected function generateHashForUser(Authenticatable $user, Request $request)
     {
-        return sha1($user->email . implode('/', $request->ips()));
+        return sha1($user->email.implode('/', $request->ips()));
     }
 
     /**

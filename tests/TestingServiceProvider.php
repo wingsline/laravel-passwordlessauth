@@ -20,7 +20,7 @@ class TestingServiceProvider extends ServiceProvider
 
         // This method works properly with RefreshDatabase
         $this->loadMigrationsFrom([
-            '--realpath' => realpath(__DIR__ . '/../vendor/orchestra/testbench-core/laravel/migrations'),
+            '--realpath' => realpath(__DIR__.'/../vendor/orchestra/testbench-core/laravel/migrations'),
         ]);
     }
 }

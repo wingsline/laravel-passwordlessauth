@@ -27,12 +27,12 @@ class VerifyEmailTest extends TestCase
         $url = $reflection_method->invoke($n, $notifiable);
 
         $expected = url(
-            'email/verify/' .
-          $notifiable->id .
-          '/' .
-          sha1($notifiable->email) .
-          '?expires=' .
-          Carbon::now()->addMinutes(Config::get('auth.verification.expire', 60))->unix() .
+            'email/verify/'.
+          $notifiable->id.
+          '/'.
+          sha1($notifiable->email).
+          '?expires='.
+          Carbon::now()->addMinutes(Config::get('auth.verification.expire', 60))->unix().
           '&signature='
         );
         self::assertTrue(Str::startsWith($url, $expected));
