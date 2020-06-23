@@ -1,0 +1,46 @@
+{
+    "name": "wingsline/passwordlessauth",
+    "description": "Passwordless Authentication for Laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arpad Olasz",
+            "email": "wingsline@gmail.com",
+            "homepage": "https://wingsline.com"
+        }
+    ],
+    "homepage": "https://github.com/wingsline/passwordlessauth",
+    "keywords": ["Laravel", "PasswordlessAuth"],
+    "require": {
+        "illuminate/support": "~7",
+        "laravel/ui": "^2.0",
+        "doctrine/dbal": "^2.10"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5",
+        "mockery/mockery": "^1.4",
+        "orchestra/testbench": "~5.3",
+        "sempro/phpunit-pretty-print": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wingsline\\PasswordlessAuth\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Wingsline\\PasswordlessAuth\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wingsline\\PasswordlessAuth\\PasswordlessAuthServiceProvider",
+                "Wingsline\\PasswordlessAuth\\PasswordlessAuthEventServiceProvider"
+            ],
+            "aliases": {
+                "PasswordlessAuth": "Wingsline\\PasswordlessAuth\\Facades\\PasswordlessAuth"
+            }
+        }
+    }
+}
