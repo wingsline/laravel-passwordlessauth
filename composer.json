@@ -42,5 +42,8 @@
                 "PasswordlessAuth": "Wingsline\\PasswordlessAuth\\Facades\\PasswordlessAuth"
             }
         }
+    },
+    "scripts": {
+        "test": "phpunit"
     }
 }
