@@ -18,7 +18,7 @@ class LoginUrlNotificationTest extends TestCase
 
         Notification::assertSentTo($user, LoginUrlNotification::class, function ($notification, $channels) use ($user) {
             $mailData = $notification->toMail($user)->toArray();
-            self::assertSame('Sign in to ' . config('app.name'), $mailData['subject']);
+            self::assertSame('Sign in to '.config('app.name'), $mailData['subject']);
             self::assertSame('foo-url', $mailData['actionUrl']);
             self::assertSame('Sign In', $mailData['actionText']);
             self::assertSame('foo-url', $mailData['displayableActionUrl']);
