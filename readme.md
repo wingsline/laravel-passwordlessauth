@@ -95,8 +95,8 @@ MIT. Please see the [license file](license.md) for more information.
 [ico-travis]: https://img.shields.io/travis/wingsline/laravel-passwordlessauth/master.svg?style=flat-square
 [ico-styleci]: https://styleci.io/repos/12345678/shield
 
-[link-packagist]: https://packagist.org/packages/wingsline/laravel-passwordlessauth
-[link-downloads]: https://packagist.org/packages/wingsline/laravel-passwordlessauth
+[link-packagist]: https://packagist.org/packages/wingsline/passwordlessauth
+[link-downloads]: https://packagist.org/packages/wingsline/passwordlessauth
 [link-travis]: https://travis-ci.org/wingsline/laravel-passwordlessauth
 [link-styleci]: https://styleci.io/repos/12345678
 [link-author]: https://github.com/wingsline
