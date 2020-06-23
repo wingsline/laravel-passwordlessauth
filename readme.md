@@ -15,6 +15,13 @@ Create a new laravel application with:
 laravel new myapp --auth
 ```
 
+
+Via Composer
+
+``` bash
+$ composer require wingsline/passwordlessauth
+```
+
 Remove the `Auth::routes();` from the `routes/web.php` and replace it with:
 
 ```php
@@ -23,11 +30,6 @@ use Wingsline\PasswordlessAuth\Facades\PasswordlessAuth;
 PasswordlessAuth::routes();
 ```
 
-Via Composer
-
-``` bash
-$ composer require wingsline/passwordlessauth
-```
 
 Replace the following route names in the original views with the `passwordless.` prefix:
 
@@ -60,8 +62,6 @@ public function sendEmailVerificationNotification()
     $this->notify(new VerifyEmail);
 }
 ```
-
-## Usage
 
 ## Change log
 
