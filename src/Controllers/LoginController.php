@@ -129,7 +129,7 @@ class LoginController extends Controller
                 throw new AuthorizationException();
             }
 
-            $this->guard()->login($user, config('auth.passwordless.remember'));
+            $this->guard()->login($user, config('passwordlessauth.remember'));
 
             return $this->sendLoginResponse($request);
         }
