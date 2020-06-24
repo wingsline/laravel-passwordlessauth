@@ -9,7 +9,7 @@ This package will enable passwordless authentication using temporary signed rout
 
 ## Installation
 
-Create a new laravel application with:
+Create a new Laravel application with:
 
 ```bash
 laravel new myapp --auth
